@@ -29,7 +29,7 @@ int main() {
         cin >> opcion;
 
         if (opcion == 1) {
-            // Mostrar lista sin ordenar
+         
             for (int i = 0; i < cantidad; ++i) {
                 cout << "Nombre: " << perros[i].nombre << ", Raza: " << perros[i].raza
                      << ", Edad: " << perros[i].edad << ", Puntos: " << perros[i].puntos << endl;
