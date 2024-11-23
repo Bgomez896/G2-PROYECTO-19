@@ -9,8 +9,15 @@ struct Perro {
 };
 
 const int MAX_PERROS = 10;
+const int LIMITE_EDAD = 10; // Límite de edad para los perros
 
 int main() {
+  
+    cout << "=========================================" << endl;
+    cout << "       Programa de Exposición de Perros" << endl;
+    cout << "          Creado por [BRAHIAN DAVID GOMEZ ARCINIEGAS/MIGUEL ANGEL GARZON MORENO/JONATHAN SNEIDER GARZÓN GARCÍA/IAN FELIPE CASTELLANOS CORONADO ]" << endl;
+    cout << "=========================================" << endl << endl;
+
     Perro perros[MAX_PERROS];
     int cantidad = 0;
     int opcion;
@@ -40,16 +47,25 @@ int main() {
             if (cantidad >= MAX_PERROS) {
                 cout << "No se pueden registrar más perros." << endl;
             } else {
+                string nombre, raza;
+                int edad, puntos;
                 cout << "Ingrese nombre del perro: ";
-                cin >> perros[cantidad].nombre;
+                cin >> nombre;
                 cout << "Ingrese raza del perro: ";
-                cin >> perros[cantidad].raza;
+                cin >> raza;
                 cout << "Ingrese edad del perro: ";
-                cin >> perros[cantidad].edad;
-                cout << "Ingrese puntos del perro: ";
-                cin >> perros[cantidad].puntos;
-                cantidad++;
-                cout << "Perro registrado exitosamente." << endl;
+                cin >> edad;
+
+                if (edad > LIMITE_EDAD) {
+                    cout << "La edad del perro excede el límite permitido de " << LIMITE_EDAD << " años. Registro cancelado." << endl;
+                } else {
+                    cout << "Ingrese puntos del perro: ";
+                    cin >> puntos;
+
+                    perros[cantidad] = {nombre, raza, edad, puntos};
+                    cantidad++;
+                    cout << "Perro registrado exitosamente." << endl;
+                }
             }
         } else if (opcion == 3) {
             if (cantidad == 0) {
@@ -112,5 +128,8 @@ int main() {
         }
     } while (opcion != 0);
 
+    cout << "Gracias por usar el programa de Exposición de Perros. ¡Hasta pronto!" << endl;
+
     return 0;
 }
+
