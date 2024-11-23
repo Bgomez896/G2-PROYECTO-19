@@ -13,9 +13,14 @@ const int LIMITE_EDAD = 10; // Límite de edad para los perros
 
 int main() {
   
+    
     cout << "=========================================" << endl;
-    cout << "       Programa de Exposición de Perros" << endl;
-    cout << "          Creado por [BRAHIAN DAVID GOMEZ ARCINIEGAS/MIGUEL ANGEL GARZON MORENO/JONATHAN SNEIDER GARZÓN GARCÍA/IAN FELIPE CASTELLANOS CORONADO ]" << endl;
+    cout << "   PROGRAMA DE EXPOSICION DE PERROS " << endl;
+    cout << "Creado por:" << endl;
+    cout << " BRAHIAN DAVID GOMEZ ARCINIEGAS " << endl;
+    cout << " MIGUEL ANGEL GARZON MORENO     " << endl;
+    cout << " JONATHAN SNEIDER GARZÓN GARCÍA " << endl;
+    cout << " IAN FELIPE CASTELLANOS CORONADO" << endl;
     cout << "=========================================" << endl << endl;
 
     Perro perros[MAX_PERROS];
